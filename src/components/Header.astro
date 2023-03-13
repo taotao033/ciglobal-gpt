@@ -1,15 +1,26 @@
 ---
-import Logo from './Logo.astro'
-import Themetoggle from './Themetoggle.astro'
+import Logo from "./Logo.astro";
+import Themetoggle from "./Themetoggle.astro";
 ---
 
 <header>
   <div class="fb">
-    <Logo />
+    <div class="img"></div>
     <Themetoggle />
   </div>
-  <div class="fi mt-2">
+  <!-- <div class="fi mt-2">
     <span class="gpt-title">CiglobalGPT</span>
-  </div>
-  <p mt-1 op-60>Based on OpenAI API (gpt-3.5-turbo).</p>
+  </div> -->
+  <!-- <p mt-1 op-60>Based on OpenAI API (gpt-3.5-turbo).</p> -->
 </header>
+<style>
+  .img {
+    width: 168px;
+    height: 44px;
+    background-size: 100% 100%;
+    background-image: url("/logo.png");
+  }
+  :global(html.dark) .img {
+    background-image: url("/logo-dark.png");
+  }
+</style>
